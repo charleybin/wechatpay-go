@@ -2,12 +2,12 @@
 
 所有URI均基于微信支付 API 地址： *https://api.mch.weixin.qq.com*
 
-方法名 | HTTP 请求 | 描述
-------------- | ------------- | -------------
-[**GetAuthentication**](#getauthentication) | **Get** /v3/payroll-card/authentications/{authenticate_number} | 获取核身结果
-[**ListAuthentications**](#listauthentications) | **Get** /v3/payroll-card/authentications | 查询核身记录
-[**PreOrderAuthentication**](#preorderauthentication) | **Post** /v3/payroll-card/authentications/pre-order | 微工卡核身预下单
-[**PreOrderAuthenticationWithAuth**](#preorderauthenticationwithauth) | **Post** /v3/payroll-card/authentications/pre-order-with-auth | 微工卡核身预下单（流程中完成授权）
+| 方法名                                                                | HTTP 请求                                                      | 描述                               |
+| --------------------------------------------------------------------- | -------------------------------------------------------------- | ---------------------------------- |
+| [**GetAuthentication**](#getauthentication)                           | **Get** /v3/payroll-card/authentications/{authenticate_number} | 获取核身结果                       |
+| [**ListAuthentications**](#listauthentications)                       | **Get** /v3/payroll-card/authentications                       | 查询核身记录                       |
+| [**PreOrderAuthentication**](#preorderauthentication)                 | **Post** /v3/payroll-card/authentications/pre-order            | 微工卡核身预下单                   |
+| [**PreOrderAuthenticationWithAuth**](#preorderauthenticationwithauth) | **Post** /v3/payroll-card/authentications/pre-order-with-auth  | 微工卡核身预下单（流程中完成授权） |
 
 
 
@@ -28,9 +28,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/payrollcard"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/payrollcard"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -77,17 +77,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**GetAuthenticationRequest**](GetAuthenticationRequest.md) | API `payrollcard` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                    | 参数描述                                                                          |
+| ------- | ----------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                         | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                               |
+| **req** | [**GetAuthenticationRequest**](GetAuthenticationRequest.md) | API `payrollcard` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**AuthenticationEntity**](AuthenticationEntity.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                  | Description                                        |
+| ---------- | ----------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**AuthenticationEntity**](AuthenticationEntity.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                  | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                             | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#payrollcardauthenticationsapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -112,9 +112,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/payrollcard"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/payrollcard"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -167,17 +167,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**ListAuthenticationsRequest**](ListAuthenticationsRequest.md) | API `payrollcard` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                        | 参数描述                                                                          |
+| ------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                             | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                               |
+| **req** | [**ListAuthenticationsRequest**](ListAuthenticationsRequest.md) | API `payrollcard` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**ListAuthenticationsResponse**](ListAuthenticationsResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                                | Description                                        |
+| ---------- | ------------------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**ListAuthenticationsResponse**](ListAuthenticationsResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                                | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                           | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#payrollcardauthenticationsapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -202,9 +202,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/payrollcard"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/payrollcard"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -257,17 +257,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**PreOrderAuthenticationRequest**](PreOrderAuthenticationRequest.md) | API `payrollcard` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                              | 参数描述                                                                          |
+| ------- | --------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                                   | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                               |
+| **req** | [**PreOrderAuthenticationRequest**](PreOrderAuthenticationRequest.md) | API `payrollcard` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**PreOrderAuthenticationResponse**](PreOrderAuthenticationResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                                      | Description                                        |
+| ---------- | ------------------------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**PreOrderAuthenticationResponse**](PreOrderAuthenticationResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                                      | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                                 | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#payrollcardauthenticationsapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -292,9 +292,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/payrollcard"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/payrollcard"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -350,17 +350,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**PreOrderAuthenticationWithAuthRequest**](PreOrderAuthenticationWithAuthRequest.md) | API `payrollcard` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                                              | 参数描述                                                                          |
+| ------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                                                   | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                               |
+| **req** | [**PreOrderAuthenticationWithAuthRequest**](PreOrderAuthenticationWithAuthRequest.md) | API `payrollcard` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**PreOrderAuthenticationWithAuthResponse**](PreOrderAuthenticationWithAuthResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                                                      | Description                                        |
+| ---------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**PreOrderAuthenticationWithAuthResponse**](PreOrderAuthenticationWithAuthResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                                                      | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                                                 | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#payrollcardauthenticationsapi)
 [\[返回接口列表\]](README.md#接口列表)

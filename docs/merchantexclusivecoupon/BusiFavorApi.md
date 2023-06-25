@@ -2,16 +2,16 @@
 
 所有URI均基于微信支付 API 地址： *https://api.mch.weixin.qq.com*
 
-方法名 | HTTP 请求 | 描述
-------------- | ------------- | -------------
-[**CouponCodeInfo**](#couponcodeinfo) | **Get** /v3/marketing/busifavor/stocks/{stock_id}/couponcodes/{coupon_code} | 查询预存code详情
-[**CreateBusifavorStock**](#createbusifavorstock) | **Post** /v3/marketing/busifavor/stocks | 创建商家券
-[**DeleteCouponCode**](#deletecouponcode) | **Delete** /v3/marketing/busifavor/stocks/{stock_id}/couponcodes/{coupon_code} | 删除预存code
-[**ModifyBudget**](#modifybudget) | **Patch** /v3/marketing/busifavor/stocks/{stock_id}/budget | 修改批次预算
-[**ModifyStockInfo**](#modifystockinfo) | **Patch** /v3/marketing/busifavor/stocks/{stock_id} | 修改商家券基本信息
-[**QueryCouponCodeList**](#querycouponcodelist) | **Get** /v3/marketing/busifavor/stocks/{stock_id}/couponcodes | 查询预存code列表
-[**QueryStock**](#querystock) | **Get** /v3/marketing/busifavor/stocks/{stock_id} | 查询商家券批次详情
-[**UploadCouponCode**](#uploadcouponcode) | **Post** /v3/marketing/busifavor/stocks/{stock_id}/couponcodes | 上传预存code
+| 方法名                                            | HTTP 请求                                                                      | 描述               |
+| ------------------------------------------------- | ------------------------------------------------------------------------------ | ------------------ |
+| [**CouponCodeInfo**](#couponcodeinfo)             | **Get** /v3/marketing/busifavor/stocks/{stock_id}/couponcodes/{coupon_code}    | 查询预存code详情   |
+| [**CreateBusifavorStock**](#createbusifavorstock) | **Post** /v3/marketing/busifavor/stocks                                        | 创建商家券         |
+| [**DeleteCouponCode**](#deletecouponcode)         | **Delete** /v3/marketing/busifavor/stocks/{stock_id}/couponcodes/{coupon_code} | 删除预存code       |
+| [**ModifyBudget**](#modifybudget)                 | **Patch** /v3/marketing/busifavor/stocks/{stock_id}/budget                     | 修改批次预算       |
+| [**ModifyStockInfo**](#modifystockinfo)           | **Patch** /v3/marketing/busifavor/stocks/{stock_id}                            | 修改商家券基本信息 |
+| [**QueryCouponCodeList**](#querycouponcodelist)   | **Get** /v3/marketing/busifavor/stocks/{stock_id}/couponcodes                  | 查询预存code列表   |
+| [**QueryStock**](#querystock)                     | **Get** /v3/marketing/busifavor/stocks/{stock_id}                              | 查询商家券批次详情 |
+| [**UploadCouponCode**](#uploadcouponcode)         | **Post** /v3/marketing/busifavor/stocks/{stock_id}/couponcodes                 | 上传预存code       |
 
 
 
@@ -32,9 +32,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/merchantexclusivecoupon"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/merchantexclusivecoupon"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -82,17 +82,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**CouponCodeInfoRequest**](CouponCodeInfoRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                              | 参数描述                                                                                      |
+| ------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                   | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                           |
+| **req** | [**CouponCodeInfoRequest**](CouponCodeInfoRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**CouponCodeInfoResponse**](CouponCodeInfoResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                      | Description                                        |
+| ---------- | --------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**CouponCodeInfoResponse**](CouponCodeInfoResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                      | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                 | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#merchantexclusivecouponbusifavorapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -118,9 +118,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/merchantexclusivecoupon"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/merchantexclusivecoupon"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -245,17 +245,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**CreateBusifavorStockRequest**](CreateBusifavorStockRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                          | 参数描述                                                                                      |
+| ------- | ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                               | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                           |
+| **req** | [**CreateBusifavorStockRequest**](CreateBusifavorStockRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**CreateBusiFavorStockResponse**](CreateBusiFavorStockResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                                  | Description                                        |
+| ---------- | --------------------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**CreateBusiFavorStockResponse**](CreateBusiFavorStockResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                                  | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                             | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#merchantexclusivecouponbusifavorapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -280,9 +280,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/merchantexclusivecoupon"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/merchantexclusivecoupon"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -330,17 +330,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**DeleteCouponCodeRequest**](DeleteCouponCodeRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                  | 参数描述                                                                                      |
+| ------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                       | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                           |
+| **req** | [**DeleteCouponCodeRequest**](DeleteCouponCodeRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**DeleteCouponCodeResponse**](DeleteCouponCodeResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                          | Description                                        |
+| ---------- | ------------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**DeleteCouponCodeResponse**](DeleteCouponCodeResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                          | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                     | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#merchantexclusivecouponbusifavorapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -365,9 +365,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/merchantexclusivecoupon"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/merchantexclusivecoupon"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -418,17 +418,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**ModifyBudgetRequest**](ModifyBudgetRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                          | 参数描述                                                                                      |
+| ------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                               | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                           |
+| **req** | [**ModifyBudgetRequest**](ModifyBudgetRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**ModifyBudgetResponse**](ModifyBudgetResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                  | Description                                        |
+| ---------- | ----------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**ModifyBudgetResponse**](ModifyBudgetResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                  | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                             | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#merchantexclusivecouponbusifavorapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -453,9 +453,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/merchantexclusivecoupon"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/merchantexclusivecoupon"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -541,16 +541,16 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**ModifyStockInfoRequest**](ModifyStockInfoRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                | 参数描述                                                                                      |
+| ------- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                     | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                           |
+| **req** | [**ModifyStockInfoRequest**](ModifyStockInfoRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                 | Description                                        |
+| ---------- | -------------------- | -------------------------------------------------- |
+| **result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**            | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#merchantexclusivecouponbusifavorapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -575,9 +575,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/merchantexclusivecoupon"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/merchantexclusivecoupon"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -627,17 +627,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**QueryCouponCodeListRequest**](QueryCouponCodeListRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                        | 参数描述                                                                                      |
+| ------- | --------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                             | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                           |
+| **req** | [**QueryCouponCodeListRequest**](QueryCouponCodeListRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**CouponCodeListResponse**](CouponCodeListResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                      | Description                                        |
+| ---------- | --------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**CouponCodeListResponse**](CouponCodeListResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                      | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                 | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#merchantexclusivecouponbusifavorapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -662,9 +662,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/merchantexclusivecoupon"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/merchantexclusivecoupon"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -710,17 +710,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**QueryStockRequest**](QueryStockRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                      | 参数描述                                                                                      |
+| ------- | --------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                           | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                           |
+| **req** | [**QueryStockRequest**](QueryStockRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**StockGetResponse**](StockGetResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                          | Description                                        |
+| ---------- | --------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**StockGetResponse**](StockGetResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                          | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                     | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#merchantexclusivecouponbusifavorapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -745,9 +745,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/merchantexclusivecoupon"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/merchantexclusivecoupon"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -795,17 +795,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**UploadCouponCodeRequest**](UploadCouponCodeRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                  | 参数描述                                                                                      |
+| ------- | --------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                       | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                           |
+| **req** | [**UploadCouponCodeRequest**](UploadCouponCodeRequest.md) | API `merchantexclusivecoupon` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**UploadCouponCodeResponse**](UploadCouponCodeResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                          | Description                                        |
+| ---------- | ------------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**UploadCouponCodeResponse**](UploadCouponCodeResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                          | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                     | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#merchantexclusivecouponbusifavorapi)
 [\[返回接口列表\]](README.md#接口列表)

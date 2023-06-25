@@ -11,11 +11,11 @@ import (
 	"mime/multipart"
 	"net/http"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/core/auth"
-	"github.com/wechatpay-apiv3/wechatpay-go/core/cipher"
-	"github.com/wechatpay-apiv3/wechatpay-go/core/consts"
-	"github.com/wechatpay-apiv3/wechatpay-go/core/option"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/core/auth"
+	"github.com/charleybin/wechatpay-go/core/cipher"
+	"github.com/charleybin/wechatpay-go/core/consts"
+	"github.com/charleybin/wechatpay-go/core/option"
 )
 
 func ExampleNewClient_default() {

@@ -2,11 +2,11 @@
 
 所有URI均基于微信支付 API 地址： *https://api.mch.weixin.qq.com*
 
-方法名 | HTTP 请求 | 描述
-------------- | ------------- | -------------
-[**GetTransferBatchByNo**](#gettransferbatchbyno) | **Get** /v3/transfer/batches/batch-id/{batch_id} | 通过微信批次单号查询批次单
-[**GetTransferBatchByOutNo**](#gettransferbatchbyoutno) | **Get** /v3/transfer/batches/out-batch-no/{out_batch_no} | 通过商家批次单号查询批次单
-[**InitiateBatchTransfer**](#initiatebatchtransfer) | **Post** /v3/transfer/batches | 发起商家转账
+| 方法名                                                  | HTTP 请求                                                | 描述                       |
+| ------------------------------------------------------- | -------------------------------------------------------- | -------------------------- |
+| [**GetTransferBatchByNo**](#gettransferbatchbyno)       | **Get** /v3/transfer/batches/batch-id/{batch_id}         | 通过微信批次单号查询批次单 |
+| [**GetTransferBatchByOutNo**](#gettransferbatchbyoutno) | **Get** /v3/transfer/batches/out-batch-no/{out_batch_no} | 通过商家批次单号查询批次单 |
+| [**InitiateBatchTransfer**](#initiatebatchtransfer)     | **Post** /v3/transfer/batches                            | 发起商家转账               |
 
 
 
@@ -27,9 +27,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/transferbatch"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/transferbatch"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -79,17 +79,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**GetTransferBatchByNoRequest**](GetTransferBatchByNoRequest.md) | API `transferbatch` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                          | 参数描述                                                                            |
+| ------- | ----------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                               | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                 |
+| **req** | [**GetTransferBatchByNoRequest**](GetTransferBatchByNoRequest.md) | API `transferbatch` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**TransferBatchEntity**](TransferBatchEntity.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                | Description                                        |
+| ---------- | --------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**TransferBatchEntity**](TransferBatchEntity.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                           | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#transferbatchtransferbatchapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -114,9 +114,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/transferbatch"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/transferbatch"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -166,17 +166,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**GetTransferBatchByOutNoRequest**](GetTransferBatchByOutNoRequest.md) | API `transferbatch` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                                | 参数描述                                                                            |
+| ------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                                     | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                 |
+| **req** | [**GetTransferBatchByOutNoRequest**](GetTransferBatchByOutNoRequest.md) | API `transferbatch` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**TransferBatchEntity**](TransferBatchEntity.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                | Description                                        |
+| ---------- | --------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**TransferBatchEntity**](TransferBatchEntity.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                           | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#transferbatchtransferbatchapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -201,9 +201,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/transferbatch"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/transferbatch"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -262,17 +262,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**InitiateBatchTransferRequest**](InitiateBatchTransferRequest.md) | API `transferbatch` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                            | 参数描述                                                                            |
+| ------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                                 | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                 |
+| **req** | [**InitiateBatchTransferRequest**](InitiateBatchTransferRequest.md) | API `transferbatch` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**InitiateBatchTransferResponse**](InitiateBatchTransferResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                                    | Description                                        |
+| ---------- | ----------------------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**InitiateBatchTransferResponse**](InitiateBatchTransferResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                                    | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                               | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#transferbatchtransferbatchapi)
 [\[返回接口列表\]](README.md#接口列表)

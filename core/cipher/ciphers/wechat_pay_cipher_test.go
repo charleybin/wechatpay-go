@@ -4,15 +4,16 @@ package ciphers
 
 import (
 	"context"
-	"github.com/agiledragon/gomonkey"
 	"reflect"
 	"testing"
 
+	"github.com/agiledragon/gomonkey"
+
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/core/cipher/decryptors"
+	"github.com/charleybin/wechatpay-go/core/cipher/encryptors"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/core/cipher/decryptors"
-	"github.com/wechatpay-apiv3/wechatpay-go/core/cipher/encryptors"
 )
 
 type Student struct {

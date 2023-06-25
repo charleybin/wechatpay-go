@@ -15,10 +15,10 @@ import (
 	"log"
 	"time"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/core/option"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/merchantexclusivecoupon"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/core/option"
+	"github.com/charleybin/wechatpay-go/services/merchantexclusivecoupon"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func ExampleBusiFavorApiService_CouponCodeInfo() {

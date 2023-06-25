@@ -7,11 +7,11 @@ import (
 	"log"
 	"os"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/core/consts"
-	"github.com/wechatpay-apiv3/wechatpay-go/core/option"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/fileuploader"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/core/consts"
+	"github.com/charleybin/wechatpay-go/core/option"
+	"github.com/charleybin/wechatpay-go/services/fileuploader"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func ExampleImageUploader_Upload() {

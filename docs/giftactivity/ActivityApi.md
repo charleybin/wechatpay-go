@@ -2,16 +2,16 @@
 
 所有URI均基于微信支付 API 地址： *https://api.mch.weixin.qq.com*
 
-方法名 | HTTP 请求 | 描述
-------------- | ------------- | -------------
-[**AddActivityMerchant**](#addactivitymerchant) | **Post** /v3/marketing/paygiftactivity/activities/{activity_id}/merchants/add | 新增活动发券商户号
-[**CreateFullSendAct**](#createfullsendact) | **Post** /v3/marketing/paygiftactivity/unique-threshold-activity | 创建全场满额送活动
-[**DeleteActivityMerchant**](#deleteactivitymerchant) | **Post** /v3/marketing/paygiftactivity/activities/{activity_id}/merchants/delete | 删除活动发券商户号
-[**GetActDetail**](#getactdetail) | **Get** /v3/marketing/paygiftactivity/activities/{activity_id} | 获取活动详情接口
-[**ListActivities**](#listactivities) | **Get** /v3/marketing/paygiftactivity/activities | 获取支付有礼活动列表
-[**ListActivityMerchant**](#listactivitymerchant) | **Get** /v3/marketing/paygiftactivity/activities/{activity_id}/merchants | 获取活动发券商户号
-[**ListActivitySku**](#listactivitysku) | **Get** /v3/marketing/paygiftactivity/activities/{activity_id}/goods | 获取活动指定商品列表
-[**TerminateActivity**](#terminateactivity) | **Post** /v3/marketing/paygiftactivity/activities/{activity_id}/terminate | 终止活动
+| 方法名                                                | HTTP 请求                                                                        | 描述                 |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------- |
+| [**AddActivityMerchant**](#addactivitymerchant)       | **Post** /v3/marketing/paygiftactivity/activities/{activity_id}/merchants/add    | 新增活动发券商户号   |
+| [**CreateFullSendAct**](#createfullsendact)           | **Post** /v3/marketing/paygiftactivity/unique-threshold-activity                 | 创建全场满额送活动   |
+| [**DeleteActivityMerchant**](#deleteactivitymerchant) | **Post** /v3/marketing/paygiftactivity/activities/{activity_id}/merchants/delete | 删除活动发券商户号   |
+| [**GetActDetail**](#getactdetail)                     | **Get** /v3/marketing/paygiftactivity/activities/{activity_id}                   | 获取活动详情接口     |
+| [**ListActivities**](#listactivities)                 | **Get** /v3/marketing/paygiftactivity/activities                                 | 获取支付有礼活动列表 |
+| [**ListActivityMerchant**](#listactivitymerchant)     | **Get** /v3/marketing/paygiftactivity/activities/{activity_id}/merchants         | 获取活动发券商户号   |
+| [**ListActivitySku**](#listactivitysku)               | **Get** /v3/marketing/paygiftactivity/activities/{activity_id}/goods             | 获取活动指定商品列表 |
+| [**TerminateActivity**](#terminateactivity)           | **Post** /v3/marketing/paygiftactivity/activities/{activity_id}/terminate        | 终止活动             |
 
 
 
@@ -32,9 +32,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/giftactivity"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/giftactivity"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -82,17 +82,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**AddActivityMerchantRequest**](AddActivityMerchantRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                        | 参数描述                                                                           |
+| ------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                             | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                |
+| **req** | [**AddActivityMerchantRequest**](AddActivityMerchantRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**AddActivityMerchantResponse**](AddActivityMerchantResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                                | Description                                        |
+| ---------- | ------------------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**AddActivityMerchantResponse**](AddActivityMerchantResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                                | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                           | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#giftactivityactivityapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -117,9 +117,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/giftactivity"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/giftactivity"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -210,17 +210,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**CreateFullSendActRequest**](CreateFullSendActRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                    | 参数描述                                                                           |
+| ------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                         | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                |
+| **req** | [**CreateFullSendActRequest**](CreateFullSendActRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**CreateFullSendActResponse**](CreateFullSendActResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                            | Description                                        |
+| ---------- | --------------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**CreateFullSendActResponse**](CreateFullSendActResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                            | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                       | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#giftactivityactivityapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -245,9 +245,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/giftactivity"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/giftactivity"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -295,17 +295,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**DeleteActivityMerchantRequest**](DeleteActivityMerchantRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                              | 参数描述                                                                           |
+| ------- | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                                   | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                |
+| **req** | [**DeleteActivityMerchantRequest**](DeleteActivityMerchantRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**DeleteActivityMerchantResponse**](DeleteActivityMerchantResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                                      | Description                                        |
+| ---------- | ------------------------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**DeleteActivityMerchantResponse**](DeleteActivityMerchantResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                                      | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                                 | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#giftactivityactivityapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -330,9 +330,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/giftactivity"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/giftactivity"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -378,17 +378,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**GetActDetailRequest**](GetActDetailRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                          | 参数描述                                                                           |
+| ------- | ------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                               | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                |
+| **req** | [**GetActDetailRequest**](GetActDetailRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**GetActDetailResponse**](GetActDetailResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                  | Description                                        |
+| ---------- | ----------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**GetActDetailResponse**](GetActDetailResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                  | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                             | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#giftactivityactivityapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -413,9 +413,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/giftactivity"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/giftactivity"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -465,17 +465,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**ListActivitiesRequest**](ListActivitiesRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                              | 参数描述                                                                           |
+| ------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                   | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                |
+| **req** | [**ListActivitiesRequest**](ListActivitiesRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**ListActivitiesResponse**](ListActivitiesResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                      | Description                                        |
+| ---------- | --------------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**ListActivitiesResponse**](ListActivitiesResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                      | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                                 | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#giftactivityactivityapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -500,9 +500,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/giftactivity"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/giftactivity"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -550,17 +550,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**ListActivityMerchantRequest**](ListActivityMerchantRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                          | 参数描述                                                                           |
+| ------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                               | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                |
+| **req** | [**ListActivityMerchantRequest**](ListActivityMerchantRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**ListActMchResponse**](ListActMchResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                              | Description                                        |
+| ---------- | ------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**ListActMchResponse**](ListActMchResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                              | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                         | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#giftactivityactivityapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -585,9 +585,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/giftactivity"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/giftactivity"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -635,17 +635,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**ListActivitySkuRequest**](ListActivitySkuRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                | 参数描述                                                                           |
+| ------- | ------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                     | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                |
+| **req** | [**ListActivitySkuRequest**](ListActivitySkuRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**ListActSkuResponse**](ListActSkuResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                              | Description                                        |
+| ---------- | ------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**ListActSkuResponse**](ListActSkuResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                              | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                         | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#giftactivityactivityapi)
 [\[返回接口列表\]](README.md#接口列表)
@@ -670,9 +670,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/wechatpay-apiv3/wechatpay-go/core"
-	"github.com/wechatpay-apiv3/wechatpay-go/services/giftactivity"
-	"github.com/wechatpay-apiv3/wechatpay-go/utils"
+	"github.com/charleybin/wechatpay-go/core"
+	"github.com/charleybin/wechatpay-go/services/giftactivity"
+	"github.com/charleybin/wechatpay-go/utils"
 )
 
 func main() {
@@ -718,17 +718,17 @@ func main() {
 ```
 
 ### 参数列表
-参数名 | 参数类型 | 参数描述
-------------- | ------------- | -------------
-**ctx** | **context.Context** | Golang 上下文，可用于日志、请求取消、请求跟踪等功能|
-**req** | [**TerminateActivityRequest**](TerminateActivityRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数|
+| 参数名  | 参数类型                                                    | 参数描述                                                                           |
+| ------- | ----------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **ctx** | **context.Context**                                         | Golang 上下文，可用于日志、请求取消、请求跟踪等功能                                |
+| **req** | [**TerminateActivityRequest**](TerminateActivityRequest.md) | API `giftactivity` 所定义的本接口需要的所有参数，包括`Path`/`Query`/`Body` 3类参数 |
 
 ### 返回结果
-Name | Type | Description
-------------- | ------------- | -------------
-**resp** | \*[**TerminateActResponse**](TerminateActResponse.md) | 结构化的接口返回结果
-**result** | **\*core.APIResult** | 本次 API 访问的请求与应答信息
-**err** | **error** | 本次 API 访问中发生的错误，当且仅当 API 失败时存在
+| Name       | Type                                                  | Description                                        |
+| ---------- | ----------------------------------------------------- | -------------------------------------------------- |
+| **resp**   | \*[**TerminateActResponse**](TerminateActResponse.md) | 结构化的接口返回结果                               |
+| **result** | **\*core.APIResult**                                  | 本次 API 访问的请求与应答信息                      |
+| **err**    | **error**                                             | 本次 API 访问中发生的错误，当且仅当 API 失败时存在 |
 
 [\[返回顶部\]](#giftactivityactivityapi)
 [\[返回接口列表\]](README.md#接口列表)
